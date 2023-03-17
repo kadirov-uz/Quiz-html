@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="students custom-box hide">
+
+        <table>
+
+
+        </table>
+        
+    </div>
+    <div class="register-box custom-box ">
+
+            <input class="custom-box" type="text" id="firstname" placeholder="Ism ni kiriting"><br>
+            <input class="custom-box"  type="text" id="lastname" placeholder="Familiyani kiriting">
+            <br>
+            <button class="btn" id="register_button">
+                Ro'yhatdan o'tish
+            </button>
+            <button class="btn" id="student_button">
+                Talabalar natijalari
+            </button>
+    </div>
+    <div class="home-box custom-box hide ">
+        <h3>Instruction:</h3>
+        <p>
+            Total number of questions: <span class="total-question"> </span>
+        </p>
+        <button type="button" class="btn"
+        onclick="show_hide('.quiz-box','.home-box'); StartQuiz()">Start Quiz</button>
+    </div>
+    <div class="quiz-box custom-box hide">
+        <div class="question-number">
+
+        </div>
+        <div class="question-text">
+
+        </div>
+        <div class="option-container">
+
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn" id="omadbek" onclick="Next()">Next</button>
+
+        </div>
+        <div class="answers-indicator">
+
+
+        </div>
+    </div>
+    <div class="result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td>Total Question</td>
+                <td><span id="t" class="total-question"></span></td>
+            </tr>
+
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="percentage"></span></td>
+            </tr>
+
+        </table>
+        <button id="try" type="button" class="btn" onclick="">Try again</button>
+        <button id="go" type="button" class="btn" onclick="show_hide('.register-box','.result-box')">Go to home</button>
+Send hello to Groesbeck groesbeck
+    </div>
+    <script src="./question.js"></script>
+    <script src="natija.js"></script>
+</body>
+
+</html>
